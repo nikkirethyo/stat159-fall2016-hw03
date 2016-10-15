@@ -15,11 +15,15 @@ r_squared <- function(lm){
 
 #residual standard error 
 residual_std_error <- function(lm){
-  return(sqrt((1/(200-3-1)*residual_sum_squares(lm))))
+  return(sqrt((1/((length(lm$fitted.values))-(length(lm$coefficients)-1)-1)*residual_sum_squares(lm))))
 }
 
 #f statistic 
 f_statistic <- function(lm){
-  return(((total_sum_squares(lm)-residual_sum_squares(lm))/3)/((residual_sum_squares(lm))/(200-3-1)))
+  TSS <- total_sum_squares(lm)
+  RSS <- residual_sum_squares(lm)
+  n <- length(lm$fitted.values)
+  p <- length(lm$coefficients) - 1
+  return(((TSS - RSS)/p)/(RSS/(n-p-1)))
 }
 

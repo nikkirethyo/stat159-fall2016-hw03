@@ -7,6 +7,16 @@ regression <- lm(formula=Sales ~ TV+Radio+Newspaper, data=data)
 #summarizes the regression model 
 regressionsum <- summary(regression)
 
+coeff <- table(regressionsum$Coefficients)
+
+RSE <- round(regressionsum$sigma, 2)
+RR <- round(regressionsum$r.squared, 2)
+Fstat <- round(regressionsum$fstatistic[[1]], 2)
+table2 <- matrix(c(RSE,RR,Fstat), nrow=3, ncol=1)
+rownames(table2) <- c("Residual Std Error", "R Squared", "F statistic")
+colnames(table2) <- c( "Value")
+
+
 #produces scatterplot for tv and sales 
 png("../../images/scatterplot-tv-sales.png")
 plot(data$TV, data$Sales, main="Linear Regression: Sales ~ TV", col="red", xlab="TV", ylab="Sales", pch=16, cex=.75)
@@ -44,4 +54,4 @@ plot(regression, which=3, pch=16, cex=.75)
 dev.off()
 
 #save regression and summary binary data 
-save(data, regression, summary, file="../../data/regression.Rdata")
+save(data, regression, regressionsum,coeff,table2, file="../../data/regression.Rdata")

@@ -2,6 +2,8 @@
 
 
 ##Functions 
+###regression-functions.R 
+This script contains functions written in R for computing statistics around regression models. Specifically is contains code for functions that compute the residual sum of squares, r-squared, total sum of squares, residual standard error, and f-statistic. The functions take a `lm` object as an input and return the numeric values for the summary statistics. 
 
 ##Scripts 
 ###eda-script.R

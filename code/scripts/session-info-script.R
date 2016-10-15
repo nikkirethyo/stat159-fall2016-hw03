@@ -1,7 +1,7 @@
 #packages used 
 library(DataComputing) 
 library(xtable) 
-library(testhat)
+library(testthat)
 
 #session info 
 sink("../../session-info.txt")
