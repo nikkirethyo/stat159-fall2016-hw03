@@ -16,4 +16,6 @@ This script reads in `Advertising.csv` as well, but also applies the multiple re
 This script will load all of the R packages used throughout this project. It also saves information about the session into a text file. 
 
 
-##Tests 
+##Tests
+###regression-tests.R 
+This script contains the tests for the regression functions in regression-functions.R.  
