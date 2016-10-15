@@ -13,4 +13,9 @@ In the code directory you will find all of the scripts, tests, and functions use
 5. Results
 6. Conclusions 
 
-##Recreating this Report  
+##Recreating this Report
+To recreate this report, please clone this current directory. From there change into the directory and for starter download the data by using the command `make data`. Afterwards you can use the command `make all`. 
+
+
+##License 
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.  
